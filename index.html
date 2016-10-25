@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Marvel DB</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<link href='https://fonts.googleapis.com/css?family=Bangers' rel='stylesheet' type='text/css'>
+<script src="superhero.js"></script>
+<style>
+/* Remove the navbar's default margin-bottom and rounded borders */
+.navbar {
+        margin-bottom: 0;
+        border-radius: 0;
+}
+
+/* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+.row.content {height: 450px}
+
+/* Set gray background color and 100% height */
+.sidenav {
+        padding-top: 20px;
+        background-color: #f1f1f1;
+height: 100%;
+}
+
+/* Set black background color, white text and some padding */
+footer {
+        background-color: #555;
+color: white;
+padding: 15px;
+}
+
+/* On small screens, set height to 'auto' for sidenav and grid */
+@media screen and (max-width: 767px) {
+        .sidenav {
+height: auto;
+padding: 15px;
+        }
+        .row.content {height:auto;}
+}
+
+.jumbotron {
+	font-family: 'Bangers';
+	text-align: justify;
+	font-size: 60px;
+}
+
+#intro {
+	font-family: 'Ubuntu', bold;
+	font-size: 18px;
+	
+}
+</style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+<div class="container-fluid">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+</div>
+<div class="collapse navbar-collapse" id="myNavbar">
+<ul class="nav navbar-nav">
+<li class="active"><a href="#">Home</a></li>
+</ul>
+<ul class="nav navbar-nav navbar-right">
+<li><a id="login" href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+</ul>
+</div>
+</div>
+</nav>
+
+<div class="container-fluid text-center">
+<div class="row content">
+<div class="col-sm-2 sidenav">
+<p><a class=queries id="link1" href="#">Find movies by actor</a></p>
+<p><a class=queries id="link2" href="#">Find movies by director</a></p>
+<p><a class=queries id="link3" href="#">Search for superpower by character</a></p>
+<p><a class=queries id="link4" href="#">Find movies by studio</a></p>
+<p><a class=queries id="link5" href="#">Find movies by world</a></p>
+<p><a class=queries id="link6" href="#">Add movies</a></p>
+
+</div>
+<div class="col-sm-8 text-left">
+<div class="container">
+<div class="jumbotron">Marvel Superhero Database</div>
+</div>
+
+<div id="intro">
+<p>Welcome to the official Marvel Superhero database. Search movies by actor, series, release date, 
+studio or add your own movies to the database<br></p>
+</div>
+
+<div id="actor">
+<form>
+  Actor Name:<br>
+  <input type="text" id="actorName" >
+  <button type="button" id="actorSubmit" class="btn btn-primary btn-sm">search</button>
+<div id=results> Results: </div>
+</form>
+</div>
+
+<div id="series">
+<form>
+  Director name:<br>
+  <input type="text" id="directorName">
+  <button type="button" id="directorSubmit" class="btn btn-primary btn-sm">search</button>
+  <div id=results2> Results: </div>
+</form>
+</div>
+
+<div id="date">
+<form>
+  Character name:<br>
+  <input type="text" id="superpower">
+  <button type="button" id="superpowerSubmit" class="btn btn-primary btn-sm">search</button>
+  <div id=results3> Results: </div>
+</form>
+</div>
+
+<div id="studio">
+<form>
+  Studio name:<br>
+  <input type="text" id="studioName">
+  <button type="button" id="studioSubmit" class="btn btn-primary btn-sm">search</button>
+</form>
+</div>
+
+<div id="world">
+<form>
+  World name:<br>
+  <input type="text" name="worldName">
+  <button type="button" id="worldSubmit" class="btn btn-primary btn-sm">search</button>
+</form>
+</div>
+
+<div id="add">
+<form>
+  still need to do this<br>
+  <input type="text" name="add">
+  <button type="button" id="actorSubmit" class="btn btn-primary btn-sm">search</button>
+</form>
+
+</div>
+</div>
+</div>
+</div>
+
+<footer class="container-fluid text-center">
+<p>CSE 385 Spring 2016 Final Project</p>
+</footer>
+<style>
+#button1, #button2 {
+    display: none;
+}
+</style>
+</body>
+</html>
